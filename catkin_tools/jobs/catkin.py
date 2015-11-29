@@ -530,7 +530,7 @@ def create_catkin_build_job(context, package, package_path, dependencies, force_
     if context.install:
         stages.append(CommandStage(
             'install',
-            command=env_prefix + [MAKE_EXEC, 'install'],
+            env_prefix + [MAKE_EXEC, 'install'],
             cwd=build_space))
 
     return Job(
