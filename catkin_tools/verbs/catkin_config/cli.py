@@ -109,6 +109,8 @@ def prepare_arguments(parser):
     add('--link-devel', dest='link_devel', action='store_true', default=None,
         help='Build products from each catkin package into isolated spaces,'
         ' then symbolically link them into a merged devel space.')
+    add('--no-link-devel', dest='link_devel', action='store_false', default=None,
+        help='Disables symbolically linking the the devel space.')
     add('--merge-devel', dest='isolate_devel', action='store_false', default=None,
         help='Build products from each catkin package into a single merged devel spaces.')
     add('--isolate-devel', action='store_true', default=None,
