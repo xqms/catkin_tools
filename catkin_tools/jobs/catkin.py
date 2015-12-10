@@ -461,10 +461,7 @@ def create_catkin_build_job(context, package, package_path, dependencies, force_
         context=context,
         env_file_path=env_file_path))
 
-    # Only use it for building if the develspace is isolated
-    env_prefix = []
-    if context.isolate_devel:
-        env_prefix = [env_file_path]
+    env_prefix = [env_file_path]
 
     # Construct CMake command
     makefile_path = os.path.join(build_space, 'Makefile')
